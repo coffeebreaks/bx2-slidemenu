@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+   
+    --bravo-blue: #0095D3;
+    --gray: #6c757d;
+    --light-background: #e4e4e4; /* Ny färg */
+}
+
+::-webkit-scrollbar {
+
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb, .trackbar::-webkit-slider-thumb {
+    background: var(--bravo-blue);
+    width: 5px;
+    height: 5px;
+
+}
+
+
+
+::-webkit-scrollbar-track {
+    background: var(--light-background);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+}   
+
+
+.slidermenu__wrapper {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.slidermenu__items {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    padding: .5rem .25rem;
+}
+
+.slidermenu__link {
+    display: flex;
+    align-items: center;
+    margin: 0 .25rem;
+    min-width: 18vw;
+    line-height: 1;
+    text-align: center;
+    justify-content: center;
+    min-width: 21vw; /* Ett ojämt värde för att se nästa länkblock */   
+    padding: 0.6rem 1rem;
+    text-align: center;
+    box-shadow: 1px 1px 4px #808080;     /* box-shadow för att skapa en ram runt texten */
+    background-color: #f2f2f2;
+    color: #000;
+    text-decoration: none;
+    font-size: .8rem;
+    border-radius: 5px;
+    text-transform: first-letter;
+    height: 20px;
+    
+}
+
+.slidermenu__icon {
+    height: 15px;
+    width: auto;
+    margin-right: 5px;
+}
+
+/* För att vända på pilen */
+.reverse {
+    transform: rotate(180deg);
+}
+
+.slidermenu__back {
+    background-color: var(--gray);
+    color: #f2f2f2;
+    min-width: 20px;
+    padding: .6rem .6rem;
+}
+
+.slidermenu__back .slidermenu__icon {
+    height: 20px;
+    width: auto;
+    margin-right: 0px;
+}
+
+.slidermenu__link__current {
+    background-color: var(--bravo-blue);
+    color: #f2f2f2;
+}
+
+@media(min-width: 500px){
+    .slidermenu__link {
+        min-width: initial;
+    }
+}
